@@ -1,36 +1,31 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# upptime configuration
+owner: whydarcy
+repo: upptime-sile-games
+site: https://whydarcy.github.io/upptime-sile-games
+status-website: true
+commit-message: "⚡ Обновление статуса"
 
+# Частота проверок (каждые 5 минут)
+schedule: "*/5 * * * *"
+
+# Логика инцидентов
+daysUntilClose: 7
+response-time-critical: 5000
+response-time-warning: 3000
+
+# Сервисы
 sites:
-  - name: Сайт
+  - name: 🌐 Основной сайт
     url: https://silegta.ru
-  - name: Форум
+
+  - name: 💬 Форум
     url: https://forum.silegta.ru
-  - name: CDN $1
+
+  - name: 📡 CDN 1 (launcher.whydarcy.ru)
     url: https://launcher.whydarcy.ru
-  - name: CDN $2
-    url: https://sile-launcher-update.sile.group/
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
 
-status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+  - name: 📡 CDN 2 (sile-launcher-update.sile.group)
+    url: https://sile-launcher-update.sile.group
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+  - name: 🧱 SILE GROUP сборки
+    url: https://sile.group
